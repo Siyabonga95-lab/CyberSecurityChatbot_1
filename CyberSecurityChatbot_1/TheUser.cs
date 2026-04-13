@@ -43,18 +43,18 @@ namespace CyberSecurityChatbot_1
             QuestionCount = 0;
         }
 
-        // ========================================================
+
         // INCREMENT QUESTIONS - This adds 1 to the question counter
-        // ========================================================
+  
         // I call this method every time the user asks a question
         public void IncrementQuestions()
         {
             QuestionCount++;
         }
 
-        // ========================================================
+    
         // GET SESSION TIME - This calculates how long they've been using the chatbot
-        // ========================================================
+
         // I subtract the start time from the current time
         public string GetSessionTime()
         {
