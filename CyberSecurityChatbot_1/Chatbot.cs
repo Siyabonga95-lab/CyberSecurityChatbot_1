@@ -16,10 +16,9 @@ namespace CyberSecurityChatbot_1
             // This way "PhIsHiNg" and "phishing" both work the same
             string msg = input.ToLower();
 
-            // ====================================================
             // EMOTIONAL RESPONSES - 6 emotions + bot's own feelings
             // I only respond to emotions if the user mentions them
-            // ====================================================
+
 
             // Emotion 1: User is confused or lost
             // I use .Contains() to check if any of these words appear in what the user said
@@ -85,11 +84,10 @@ namespace CyberSecurityChatbot_1
                 return GetMenu();
             }
 
-            // ====================================================
             // TOPIC RESPONSES - I figure out what the user wants to learn about
             // I use .Contains() to check for keywords in their message
             // This works even if they ask in different ways
-            // ====================================================
+
 
             // PHISHING TOPIC - I check for words like phish, scam email, fake email
             // The .Contains() method catches these even if they're in a sentence
@@ -132,9 +130,9 @@ namespace CyberSecurityChatbot_1
             return $"Hmm {userName}, I'm not sure I understood.  Try asking about phishing, passwords, links, browsing, reporting, or cybersecurity. Type 'menu' to see all topics! ";
         }
 
-        // ========================================================
+      
         // GET MENU - This shows all the topics I can teach about
-        // ========================================================
+   
         private string GetMenu()
         {
             return "== Here's what I can teach you:\n\n" +
@@ -147,10 +145,10 @@ namespace CyberSecurityChatbot_1
                    "Just type what you want to learn! Example: 'what is phishing' or 'how to spot phishing'";
         }
 
-        // ====================================================
+       
         // PHISHING RESPONSES - Different ways to ask the same thing
         // I use .Contains() to check what type of question they're asking
-        // ====================================================
+        
         private string GetPhishingResponse(string msg, string name)
         {
             // What is phishing? (definition) - I check for "what is", "define", or "meaning"
@@ -193,9 +191,9 @@ namespace CyberSecurityChatbot_1
             return $"I'd love to teach you about phishing {name}! \n\nYou can ask me:\n• 'What is phishing?'\n• 'Why does phishing exist?'\n• 'How to spot phishing?'\n• 'Examples of phishing'\n• 'How to protect myself?'\n\nWhat would you like to know?";
         }
 
-        // ====================================================
+      
         // PASSWORD RESPONSES
-        // ====================================================
+       
         private string GetPasswordResponse(string msg, string name)
         {
             // What is password safety?
@@ -238,9 +236,9 @@ namespace CyberSecurityChatbot_1
             return $"I'd love to teach you about passwords {name}! \n\nYou can ask me:\n• 'What is password safety?'\n• 'Why are passwords important?'\n• 'How to create a strong password?'\n• 'What to avoid in passwords?'\n• 'How to manage many passwords?'\n\nWhat would you like to know?";
         }
 
-        // ====================================================
+    
         // SUSPICIOUS LINKS RESPONSES
-        // ====================================================
+       
         private string GetLinkResponse(string msg, string name)
         {
             // What are suspicious links?
@@ -283,9 +281,9 @@ namespace CyberSecurityChatbot_1
             return $"I'd love to teach you about suspicious links {name}! \n\nYou can ask me:\n• 'What are suspicious links?'\n• 'Why do scammers use links?'\n• 'How to spot fake links?'\n• 'How to check if a link is safe?'\n• 'What happens if I click a bad link?'\n\nWhat would you like to know?";
         }
 
-        // ====================================================
+       
         // SAFE BROWSING RESPONSES
-        // ====================================================
+      
         private string GetBrowsingResponse(string msg, string name)
         {
             // What is safe browsing?
@@ -322,9 +320,9 @@ namespace CyberSecurityChatbot_1
             return $"I'd love to teach you about safe browsing {name}! \n\nYou can ask me:\n• 'What is safe browsing?'\n• 'Why is safe browsing important?'\n• 'How to check if a website is safe?'\n• 'What browser settings should I use?'\n• 'What to avoid while browsing?'\n\nWhat would you like to know?";
         }
 
-        // ====================================================
+       
         // REPORTING RESPONSES
-        // ====================================================
+        
         private string GetReportingResponse(string msg, string name)
         {
             // Where to report phishing emails?
@@ -355,9 +353,9 @@ namespace CyberSecurityChatbot_1
             return $"I'd love to teach you about reporting {name}! \n\nYou can ask me:\n• 'Where to report phishing emails?'\n• 'How to report to SAPS?'\n• 'What to do after being scammed?'\n• 'Why is reporting important?'\n\nWhat would you like to know?";
         }
 
-        // ====================================================
+
         // CYBERSECURITY RESPONSES
-        // ====================================================
+       
         private string GetCyberResponse(string msg, string name)
         {
             // What is cybersecurity?
