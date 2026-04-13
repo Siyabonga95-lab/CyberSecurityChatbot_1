@@ -2,10 +2,10 @@
 
 namespace CyberSecurityChatbot_1
 {
-    // ============================================================
+  
     // USER CLASS - This stores information about the person using my chatbot
     // I use this to remember the user's name and track their activity
-    // ============================================================
+   
     public class User
     {
         // ========================================================

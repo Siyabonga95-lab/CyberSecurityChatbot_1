@@ -6,9 +6,9 @@ namespace CyberSecurityChatbot_1
     // This is the brain of my chatbot - it decides what to say
     public class Chatbot
     {
-        // ========================================================
+      
         // GET RESPONSE - This is the main method that gets called for every user message
-        // ========================================================
+     
         // I check what the user said and return an appropriate response
         public string GetResponse(string input, string userName)
         {
