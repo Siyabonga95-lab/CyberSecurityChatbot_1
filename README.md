@@ -124,3 +124,6 @@ During the chat, it also prevents empty messages and prompts the user to enter m
 ## Conclusion
 
 This chatbot demonstrates how fundamental programming concepts such as classes, methods, loops, and conditional logic can be combined to create an interactive educational tool. While simple in design, it effectively introduces users to essential cybersecurity practices in an accessible and structured manner.
+
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/8f9962a1-c622-4947-9e0a-6484ab3a4048" />
+
