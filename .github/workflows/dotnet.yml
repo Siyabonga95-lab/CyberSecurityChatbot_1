@@ -1,36 +1,33 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
-name: .NET
+name: .NET Framework CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["master"]
 
 jobs:
-  build-and-test:
+  build:
     runs-on: windows-latest
 
-    steps:    
-    
-    - uses: actions/checkout@v4
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 8.0.x
-    - name: Restore dependencies
-      run: dotnet restore CyberSecurityChatbot_1/CyberSecurityChatbot_1.csproj
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v2
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Restore packages
+      run: nuget restore CyberSecurityChatbot_1/CyberSecurityChatbot_1.csproj
+
     - name: Build
-      run: dotnet build CyberSecurityChatbot_1/CyberSecurityChatbot_1.csproj --no-restore --configuration Release
-    - name: Test
-      run: dotnet test  CyberSecurityChatbot_1/CyberSecurityChatbot_1.csproj --no-build --verbosity normal
-    - name: Publish
-      run: dotnet publish  CyberSecurityChatbot_1/CyberSecurityChatbot_1.csproj --no-build --configuration Release --output ./publish
-    - name: Upload build artifact
+      run: msbuild CyberSecurityChatbot_1/CyberSecurityChatbot_1.csproj /p:Configuration=Release
+
+    - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name:  cyberSecurityChatbot_1-release
-        path: ./publish
-    
+        name: chatbot-release
+        path: CyberSecurityChatbot_1/bin/Release/
