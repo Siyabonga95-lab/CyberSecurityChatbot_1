@@ -72,10 +72,10 @@ namespace CyberSecurityChatbot_1
             StartChat(user);
         }
 
-        // ============================================================
+        
         // IS VALID NAME - This checks if a name has only letters and spaces
         // I use Regex to make sure there are no numbers or symbols
-        // ============================================================
+     
         static bool IsValidName(string name)
         {
             // I trim the name to remove extra spaces at the start or end
@@ -108,10 +108,10 @@ namespace CyberSecurityChatbot_1
             Console.ResetColor();
         }
 
-        // ============================================================
+      
         // TYPE TEXT - This makes the bot type letter by letter
         // It feels more like a real person is talking to you
-        // ============================================================
+       
         static void TypeText(string text, int delay = 40)
         {
             // I loop through each character in the text
@@ -122,10 +122,10 @@ namespace CyberSecurityChatbot_1
             }
         }
 
-        // ============================================================
+     
         // SHOW LOADING - This creates a progress bar from 0% to 100%
         // It makes the user feel like I'm thinking about their question
-        // ============================================================
+     
         static void ShowLoading(int duration = 1200)
         {
             // I show "Bot is thinking" with animated dots
@@ -149,10 +149,10 @@ namespace CyberSecurityChatbot_1
             Thread.Sleep(300);
         }
 
-        // ============================================================
+        
         // PLAY VOICE GREETING - This plays my WAV file
         // I use PlaySync() so the sound finishes before continuing
-        // ============================================================
+     
         static void PlayVoiceGreeting()
         {
             try
@@ -177,7 +177,7 @@ namespace CyberSecurityChatbot_1
             Chatbot bot = new Chatbot();
 
             // I show the user what topics I can help with
-            TypeText("Bot:  I can teach you about:\n", 40);
+            TypeText("Bot: == I can teach you about:\n", 40);
             // I change to green for the topic list
             Console.ForegroundColor = ConsoleColor.Green;
             TypeText("  • PHISHING - Spot fake emails\n", 40);
